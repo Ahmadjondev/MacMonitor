@@ -1,0 +1,34 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Toolchain
+        run: |
+          sw_vers
+          swiftc --version
+
+      - name: Compile (universal, macOS 13+)
+        run: APP="$RUNNER_TEMP/Mac Monitor.app" ./build.sh
+
+      - name: Verify bundle
+        run: |
+          APP="$RUNNER_TEMP/Mac Monitor.app"
+          BIN="$APP/Contents/MacOS/MacMonitor"
+          lipo -archs "$BIN"
+          lipo -archs "$BIN" | grep -q arm64
+          lipo -archs "$BIN" | grep -q x86_64
+          plutil -lint "$APP/Contents/Info.plist"
+          codesign --verify --verbose=2 "$APP"

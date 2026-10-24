@@ -1,0 +1,77 @@
+name: Bug report
+description: Something is wrong, crashes, or shows an incorrect number.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for reporting! Please fill in as much as you can.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you saw, and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open the popover
+        2. Switch to …
+        3. …
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Mac Monitor version
+      description: From the DMG / release name, or the commit if built from source.
+      placeholder: 1.0.0
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+      placeholder: macOS 15.1
+    validations:
+      required: true
+  - type: dropdown
+    id: chip
+    attributes:
+      label: Mac
+      options:
+        - Apple Silicon
+        - Intel
+    validations:
+      required: true
+  - type: dropdown
+    id: install
+    attributes:
+      label: Installed via
+      options:
+        - DMG from Releases
+        - Homebrew
+        - Built from source
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where does it happen?
+      multiple: true
+      options:
+        - Menu bar
+        - Popover dashboard
+        - Full window
+        - Insights
+        - Settings
+        - Memory cleaning
+        - Launch at login
+        - Other
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots, logs, or comparison values
+      description: |
+        For wrong numbers, compare with Activity Monitor and include both. For crashes, attach
+        the report from Console.app → Crash Reports → MacMonitor.

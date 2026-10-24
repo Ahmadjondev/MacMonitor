@@ -1,0 +1,42 @@
+name: Feature request
+description: Suggest a new metric, setting, translation, or improvement.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: What are you trying to see or do that Mac Monitor doesn't support today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: How you imagine it working. Mockups or examples from other apps are welcome.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      multiple: true
+      options:
+        - Menu bar
+        - Popover dashboard
+        - Full window
+        - Insights / history
+        - Settings
+        - Localization
+        - Install / packaging
+        - Other
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: checkboxes
+    id: contribute
+    attributes:
+      label: Contribution
+      options:
+        - label: I'd like to implement this myself.

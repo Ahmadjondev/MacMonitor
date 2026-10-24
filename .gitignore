@@ -1,0 +1,21 @@
+# Build / release artifacts
+dist/
+*.dmg
+*.zip
+
+# Generated icon intermediates (kept: icongen.swift, icon_1024.png, AppIcon.icns)
+Resources/AppIcon.iconset/
+
+# macOS
+.DS_Store
+
+# Editor / misc
+*.swp
+.build/
+DerivedData/
+build/
+
+# Local-only notes (never commit)
+cd-terminal.md
+CLAUDE.md
+.claude/
