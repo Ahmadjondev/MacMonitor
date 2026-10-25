@@ -24,16 +24,36 @@ window mode. Native SwiftUI + AppKit, no third-party dependencies, no network ac
 ## Screenshots
 
 <div align="center">
+  <img src="assets/menubar.png" width="560" alt="Menu-bar item in its three modes: network speed, RAM %, CPU %" />
+</div>
+
+<div align="center"><sub>Menu bar: network speed (default), RAM % or CPU %</sub></div>
+
+<br />
+
+<div align="center">
   <img src="assets/window.png" width="760" alt="Mac Monitor full window: memory, processor, network and storage cards" />
 </div>
+
+<div align="center"><sub>Full window</sub></div>
+
+<br />
 
 <div align="center">
   <img src="assets/popover.png" width="300" alt="Menu-bar dashboard popover" />
   &nbsp;&nbsp;
+  <img src="assets/settings.png" width="274" alt="Settings: language, menu bar, cards and memory options" />
+</div>
+
+<div align="center"><sub>Menu-bar dashboard · Settings</sub></div>
+
+<br />
+
+<div align="center">
   <img src="assets/insights.png" width="330" alt="Insights: RAM and CPU history charts" />
 </div>
 
-<div align="center"><sub>Full window · Menu-bar dashboard · Insights</sub></div>
+<div align="center"><sub>Insights</sub></div>
 
 ## What it is
 
