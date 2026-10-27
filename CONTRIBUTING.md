@@ -4,6 +4,9 @@ Thanks for helping! Bug reports, feature ideas, translations and pull requests a
 welcome. Please use the issue templates for bugs and features. For anything larger
 than a small fix, open an issue first so we can agree on the approach.
 
+Everyone taking part is expected to follow the [Code of Conduct](CODE_OF_CONDUCT.md).
+Found a security problem? Don't open an issue; see [SECURITY.md](SECURITY.md).
+
 ## Build
 
 You need macOS 13+ and the Xcode Command Line Tools (`xcode-select --install`). There
