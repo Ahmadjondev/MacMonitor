@@ -17,6 +17,8 @@ window mode. Native SwiftUI + AppKit, no third-party dependencies, no network ac
 
 [**Download the latest DMG**](https://github.com/Ahmadjondev/MacMonitor/releases/latest/download/MacMonitor.dmg)
 
+<sub>Free and open source. If Mac Monitor is useful to you, a ⭐ helps other Mac users find it.</sub>
+
 </div>
 
 ---
@@ -66,6 +68,21 @@ helps**. On macOS, low "free RAM" is normal: the system uses idle memory as disk
 The metric that matters is **memory pressure**. Mac Monitor never purges on a blind
 timer. It cleans when you ask, or (if you opt in) automatically only while pressure is
 critical.
+
+## How it compares
+
+There are great monitors already. Mac Monitor aims to be the small, focused one.
+
+| | Mac Monitor | [Stats](https://github.com/exelban/stats) | iStat Menus |
+|---|---|---|---|
+| Price | Free, MIT | Free, MIT | Paid |
+| Menu bar | One fixed-width number (net / RAM / CPU) | Many modules, highly configurable | Many modules |
+| Focus | Memory pressure, with optional pressure-aware `purge` | Broad hardware sensors | Broad hardware sensors |
+| Network access | None, by design | Update checks | Update checks |
+
+If you want every sensor and fan speed, use Stats or iStat Menus. If you want one quiet
+number in the menu bar and an honest answer to *"is my Mac actually out of memory?"*,
+try Mac Monitor.
 
 ## Features
 
@@ -304,7 +321,8 @@ build.sh              Build and install the .app
 
 ## Contributing
 
-Bug reports, feature ideas, translations and pull requests are welcome. See
+Bug reports, feature ideas, translations and pull requests are welcome. Adding a new
+language is a good first contribution: it's a single string table in `Localization.swift`. See
 [CONTRIBUTING.md](CONTRIBUTING.md) for build steps, code style and how to add a language.
 Changes are listed in [CHANGELOG.md](CHANGELOG.md).
 
